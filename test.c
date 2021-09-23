@@ -60,7 +60,7 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
 
    // Write header (8 bit colour depth)
    png_set_IHDR(png_ptr, info_ptr, width, height,
-         8, PNG_COLOR_TYPE_RGB, PNG_INTERLACE_NONE,
+         8, PNG_COLOR_TYPE_GRAY, PNG_INTERLACE_NONE,
          PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
 
    // Set title
@@ -75,14 +75,15 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
    png_write_info(png_ptr, info_ptr);
 
    // Allocate memory for one row (3 bytes per pixel - RGB)
-   row = (png_bytep) malloc(3 * width * sizeof(png_byte));
+   row = (png_bytep) malloc(width * sizeof(png_byte));
 
    // Write image data
    int x, y;
    for (y=-512 ; y<height/2 ; y++) {
+	  printf("printing row %i", y);
       for (x=-512 ; x<width/2 ; x++) {
     	  treeNode *n = getNode(x, y, t->treeRoot, 512);
-    	  row[x] = n->occupancy+50;
+    	  row[x+512] = n->occupancy+50;
       }
       png_write_row(png_ptr, row);
    }

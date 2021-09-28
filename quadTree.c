@@ -20,7 +20,7 @@
 
 
 int maxSize = 512; //size of a side for the largest possible square of the map;
-int resolution = 8; //size of a side of the smallest possible square of the map
+int resolution = 32; //size of a side of the smallest possible square of the map
 
 int round10(int n)
 {
@@ -56,45 +56,32 @@ void initTree(quadTree* tree)
 	tree->height = 0;
 }
 
+
 void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point_y)
 {
-	float dy = point_y -pos_y;
-	float dx = point_x - pos_x;
+	float dy = pos_y-point_y;
+	float dx = pos_x-point_x;
 	float m = dy/dx;
-//	float b = pos_y - m * pos_x;
 	//insert nodes from x = pos_x to x = point_x at the appropriate y values
 	float y = pos_y;
 	int pos = FLOAT_TO_INT(pos_x);
 	int point = FLOAT_TO_INT(point_x);
-//	printf("inserting empty nodes\n");
-
 	if(dx < 0)
 	{
-		for (int i = pos; i > point; i--)
+		for (int i = pos; i < point; i++)
 		{
-
 			y = y + m;
-
-			printf("inserting point %d,%f\n", i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 		}
 	}
 	else{
-		for (int i = pos; i < point; i++)
-
+		for (int i = pos; i > point; i--)
 		{
-			y = y + m;
-			printf("inserting point %d,%f\n", i, y);
+			y = y - m;//c
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 		}
 	}
-
 	//final node will be occupied;
-//	eventTrigger_updateMap_payload.x = point_x;
-//	eventTrigger_updateMap_payload.y = point_y;
-//	eventTrigger_updateMap_payload.occupied = true;
-//	eventTrigger(&eventTrigger_updateMap);
-//	printf("inserting final node\n");
 	insertNode(tree, tree->treeRoot, FLOAT_TO_INT(point_x), FLOAT_TO_INT(point_y), true, maxSize);
 }
 
@@ -110,6 +97,7 @@ void getNorthNeighbour(quadTree *tree, coord centerNode, treeNode *north)
 {
 	north = getNode(centerNode.x, centerNode.y+1, tree->treeRoot, maxSize);
 }
+
 // recursively find the location that the node should be inserted, once located, update the nodes P(occupancy). After insertion
 // check if nodes can be combined while propagating back
 void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, int squareSize) //recursive attempt so that pruning can be achieved
@@ -179,11 +167,11 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				treeNode new;
 //				printf("Making ne node\n");
 				node->ne = (treeNode*)malloc(sizeof(treeNode));
+				tree->count += 1;
 //				*(node->ne) = new;
 			}
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
-
 //			printf("recursing ne\n");
 			insertNode(tree, node->ne,  x-squareSize, y-squareSize, occupied, squareSize);
 		}
@@ -195,9 +183,9 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				treeNode new;
 //				printf("Making nw node\n");
 				node->nw = (treeNode*)malloc(sizeof(treeNode));
+				tree->count += 1;
 //				*(node->ne) = new;
 			}
-
 //			printf("recursing nw\n");
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
@@ -216,6 +204,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				treeNode new;
 //				printf("Making se node\n");
 				node->se = (treeNode*)malloc(sizeof(treeNode));
+				tree->count += 1;
 //				*(node->ne) = new;
 			}
 				//now recurse down the tree with updated node and squareSize
@@ -236,6 +225,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				treeNode new;
 //				printf("Making sw node\n");
 				node->sw = (treeNode*)malloc(sizeof(treeNode));
+				tree->count += 1;
 //				*(node->ne) = new;
 			}
 			//now recurse down the tree with updated node and squareSize
@@ -247,6 +237,19 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 
 	}
 	//check if we can now prune
+	if((node->nw) && (node->sw) && (node->ne) && (node->se))
+	{
+		bool pruned = prune(node);
+		if(pruned)
+		{
+			node->nw = 0;
+			node->ne = 0;
+			node->sw = 0;
+			node->se = 0;
+			printf("pruned!\n");
+			tree->count -=4;
+		}
+	}
 }
 
 //returns a pointer to the node at specified (x,y), could not be at lowest resolution if tree is not fully

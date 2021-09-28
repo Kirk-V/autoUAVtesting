@@ -1,0 +1,62 @@
+Waiting for hand to be removed!
+Unlocked!
+unlocked, starting to hover
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height reached! Switching to explore mode 
+Current State (u,f,l,r,b),(x,y,z), yaw) (1624, 1928, 434, 113, 117), (-0.056517, 0.074465, 0.010549), -0.116669 
+Current State (u,f,l,r,b),(x,y,z), yaw) (1624, 1928, 434, 113, 117), (-0.056517, 0.074465, 0.010549), 5.886972 
+--247, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 18.0 
+--246, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 36.0 
+--246, 25
+Turning Left to setpoint (0.0, 0.0) yaw: 54.0 
+--244, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 72.0 
+--244, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 90.0 
+--243, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 108.0 
+--243, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 126.0 
+--246, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 144.0 
+--246, 21
+---120, 400
+Turning Left to setpoint (0.0, 0.0) yaw: 162.0 
+--249, 21
+Turning Left to setpoint (0.0, 0.0) yaw: 180.0 
+--249, 21
+Turning Left to setpoint (0.0, 0.0) yaw: -162.0 
+--248, 21
+Turning Left to setpoint (0.0, 0.0) yaw: -144.0 
+--248, 21
+Turning Left to setpoint (0.0, 0.0) yaw: -126.0 
+--248, 17
+Turning Left to setpoint (0.0, 0.0) yaw: -108.0 
+--248, 13
+Turning Left to setpoint (0.0, 0.0) yaw: -90.0 
+--245, 4
+Turning Left to setpoint (0.0, 0.0) yaw: -72.0 
+--245, -4
+Turning Left to setpoint (0.0, 0.0) yaw: -54.0 
+--245, -17
+Turning Left to setpoint (0.0, 0.0) yaw: -36.0 
+--243, -29
+Turning Left to setpoint (0.0, 0.0) yaw: -18.0 
+--235, -41
+Turning Left to setpoint (0.0, 0.0) yaw: 0.0 
+left loop
+up is 1399
+left is1718
+Stopped

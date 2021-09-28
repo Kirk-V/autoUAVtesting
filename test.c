@@ -6,9 +6,12 @@
 #include <time.h>
 #include <math.h>
 #include <malloc.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 1024
 
 int test_stack = 0;
-int test_quadTree = 1;
+int test_quadTree = 0;
 
 float RandomInt(int min, int max){
 	int total = max-min;
@@ -80,10 +83,10 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
    // Write image data
    int x, y;
    for (y=-512 ; y<height/2 ; y++) {
-	  printf("printing row %i", y);
+//	  printf("printing row %i", y);
       for (x=-512 ; x<width/2 ; x++) {
     	  treeNode *n = getNode(x, y, t->treeRoot, 512);
-    	  row[x+512] = n->occupancy+50;
+    	  row[x+512] = (n->occupancy +50);
       }
       png_write_row(png_ptr, row);
    }
@@ -100,6 +103,42 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
    return code;
 }
 
+void dataToImage(const char *filename, quadTree *t)
+{
+
+    char line[MAX_LINE_LENGTH] = {0};
+    unsigned int line_count = 0;
+	FILE *file = fopen(filename, "r");
+    while (fgets(line, MAX_LINE_LENGTH, file))
+    {
+        /* Print each line */
+        printf("line[%06d]: %s", ++line_count, line);
+        printf("%c\n", line[0]);
+        if(line[0] == '-'){
+        	char line2[MAX_LINE_LENGTH];
+        	strncpy(line2, line+2, 10);
+        	printf("line2: %s\n", line2);
+
+        	char * token = strtok(line2, ", ");
+        	int x = atoi(token);
+        	token = strtok(NULL, " ");
+        	int y = atoi(token);
+        	printf("inserting (%i,%i)\n", x, y);
+        	updateTree(t, 0,0, x, y);
+        }
+        /* Add a trailing newline to lines that don't already have one */
+        if (line[strlen(line) - 1] != '\n')
+            printf("\n");
+    }
+
+    printf("tree Made \n");
+
+	int close = fclose(file);
+	if(close)
+	{
+		printf("closed file\n");
+	}
+}
 int main()
 {
 	pathStack s;
@@ -181,8 +220,15 @@ int main()
 		printf("printing tree\n" );
 		int w = writeImage("testimg", 1024, 1024, "map", &t);
 		printf("w: %i\n", w);
+		printf("size of tree : %i \n", t.count);
 
 	}
+	treeNode root = {0,0,0,0,0};
+	quadTree t = {&root,0,0};
+	dataToImage("console_output.txt", &t);
+	int w = writeImage("testimg", 1024, 1024, "map", &t);
+	printf("w = %i\n", w);
 	return 0;
 }
+//gcc -Wall test.c quadTree.c directionStack.c -o test -lpng
 

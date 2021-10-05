@@ -20,7 +20,7 @@
 
 
 int maxSize = 512; //size of a side for the largest possible square of the map;
-int resolution = 32; //size of a side of the smallest possible square of the map
+int resolution = 8; //size of a side of the smallest possible square of the map
 
 int round10(int n)
 {
@@ -71,13 +71,16 @@ void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point
 		for (int i = pos; i < point; i++)
 		{
 			y = y + m;
+			printf("Inserting NEW NODE: (%i, %f)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
+
 		}
 	}
 	else{
 		for (int i = pos; i > point; i--)
 		{
 			y = y - m;//c
+			printf("Inserting NEW NODE: (%i,%fd)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 		}
 	}
@@ -102,7 +105,8 @@ void getNorthNeighbour(quadTree *tree, coord centerNode, treeNode *north)
 // check if nodes can be combined while propagating back
 void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, int squareSize) //recursive attempt so that pruning can be achieved
 {
-//	printf("squareSize is now: %i\n", squareSize);
+//	printf("square size: %i\n", squareSize);
+
 	if (!inRange(x, y)){
 		return;
 	}
@@ -111,7 +115,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	//the same as the data measurement, we do not need to continue as the tree is already consistent with the new data.
 	if(occupied)
 	{
-		if(node->occupancy >= 50)
+		if(node->occupancy >= 100)
 		{
 			//no updates needed
 			return;
@@ -119,7 +123,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	}
 	else //data says not occupied.
 	{
-		if(node->occupancy <= -50)
+		if(node->occupancy <= -100)
 		{
 			return;
 		}
@@ -132,11 +136,12 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	{
 		//space cannot be divided up further, we should update the node here
 //		printf("can't breakdown further\n");
+		printf(" inserting %i, %i--SS = %i---", x,y,squareSize);
 		if (occupied) //data says occupied
 		{
 			//add 10 to occupancy value of node
-			node->occupancy += 10;
-			if(node->occupancy > 50)
+			node->occupancy = 100;
+			if(node->occupancy > 100)
 			{
 				//cut off occupancy at 50 so over confidence does not occur
 				node->occupancy = 50;
@@ -144,11 +149,11 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 		}
 		if (!occupied)
 		{
-			node->occupancy -= 10;
-			if(node->occupancy < -50)
+			node->occupancy = -100;
+			if(node->occupancy < -100)
 			{
 				//cut off occupancy at -50 so over confidence does not occur
-				node->occupancy = 50;
+				node->occupancy = -50;
 			}
 		}
 		return;
@@ -168,6 +173,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				printf("Making ne node\n");
 				node->ne = (treeNode*)malloc(sizeof(treeNode));
 				tree->count += 1;
+				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
 			//now recurse down the tree with updated node and squareSize
@@ -184,6 +190,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				printf("Making nw node\n");
 				node->nw = (treeNode*)malloc(sizeof(treeNode));
 				tree->count += 1;
+				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
 //			printf("recursing nw\n");
@@ -194,7 +201,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	}
 	else
 	{
-		//north
+		//south
 		if(x >= 0)
 		{
 			//southeast..Check to see if node exists here
@@ -205,6 +212,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				printf("Making se node\n");
 				node->se = (treeNode*)malloc(sizeof(treeNode));
 				tree->count += 1;
+				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
 				//now recurse down the tree with updated node and squareSize
@@ -226,6 +234,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 //				printf("Making sw node\n");
 				node->sw = (treeNode*)malloc(sizeof(treeNode));
 				tree->count += 1;
+				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
 			//now recurse down the tree with updated node and squareSize
@@ -250,6 +259,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			tree->count -=4;
 		}
 	}
+	return;
 }
 
 //returns a pointer to the node at specified (x,y), could not be at lowest resolution if tree is not fully

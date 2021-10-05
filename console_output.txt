@@ -9,54 +9,52 @@ Hover Height not reached
 Hover Height not reached 
 Hover Height not reached 
 Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
 Hover Height reached! Switching to explore mode 
-Current State (u,f,l,r,b),(x,y,z), yaw) (1624, 1928, 434, 113, 117), (-0.056517, 0.074465, 0.010549), -0.116669 
-Current State (u,f,l,r,b),(x,y,z), yaw) (1624, 1928, 434, 113, 117), (-0.056517, 0.074465, 0.010549), 5.886972 
---247, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 18.0 
---246, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 36.0 
---246, 25
-Turning Left to setpoint (0.0, 0.0) yaw: 54.0 
---244, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 72.0 
---244, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 90.0 
---243, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 108.0 
---243, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 126.0 
---246, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 144.0 
---246, 21
----120, 400
-Turning Left to setpoint (0.0, 0.0) yaw: 162.0 
---249, 21
-Turning Left to setpoint (0.0, 0.0) yaw: 180.0 
---249, 21
-Turning Left to setpoint (0.0, 0.0) yaw: -162.0 
---248, 21
-Turning Left to setpoint (0.0, 0.0) yaw: -144.0 
---248, 21
-Turning Left to setpoint (0.0, 0.0) yaw: -126.0 
---248, 17
-Turning Left to setpoint (0.0, 0.0) yaw: -108.0 
---248, 13
-Turning Left to setpoint (0.0, 0.0) yaw: -90.0 
---245, 4
-Turning Left to setpoint (0.0, 0.0) yaw: -72.0 
---245, -4
-Turning Left to setpoint (0.0, 0.0) yaw: -54.0 
---245, -17
-Turning Left to setpoint (0.0, 0.0) yaw: -36.0 
---243, -29
-Turning Left to setpoint (0.0, 0.0) yaw: -18.0 
---235, -41
-Turning Left to setpoint (0.0, 0.0) yaw: 0.0 
+Current State (u,f,l,r,b),(x,y,z), yaw) (2323, 199, 256, 579, 329), (0.012929, -0.008895, 0.000638), 0.064211 
+Current State (u,f,l,r,b),(x,y,z), yaw) (2323, 199, 256, 579, 329), (0.012929, -0.008895, 0.000638), -1.297785 
+--219, -3
+--180, 48
+--156, 109
+--101, 145
+--42, 148
+---5, 149
+---47, 123
+---34, 44
+---37, 24
+---36, 9
+---35, -1
+---115, -44
+---66, -57
+---50, -84
+---11, -52
+--12, -89
+--69, -148
+--82, -91
+--164, -90
+--221, -42
 left loop
-up is 1399
-left is1718
+Moving from (0.014164,0.005296) forward 1000 to point (1.006840, 0.126107) yaw:6.938895
+--61, 5
+--27, 7
+--27, 40
+--20, 54
+--5, 62
+---29, 152
+---81, 131
+---109, 92
+---57, 22
+---55, 4
+---50, -12
+---44, -25
+---93, -104
+---42, -94
+---8, -77
+--22, -96
+--118, -188
+--102, -83
+--124, -45
+--223, -7
+Currently At: (-0.009732, -0.001168, 0.000638) yaw: -2.316092
+up is 2131
+left is2051
 Stopped

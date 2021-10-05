@@ -12,6 +12,7 @@
 
 int test_stack = 0;
 int test_quadTree = 0;
+int test_collected_data = 1;
 
 float RandomInt(int min, int max){
 	int total = max-min;
@@ -81,14 +82,30 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
    row = (png_bytep) malloc(width * sizeof(png_byte));
 
    // Write image data
+   int occ;
    int x, y;
-   for (y=-512 ; y<height/2 ; y++) {
+   for(y = -1*(height/2); y<height/2 ; y++) {
 //	  printf("printing row %i", y);
-      for (x=-512 ; x<width/2 ; x++) {
-    	  treeNode *n = getNode(x, y, t->treeRoot, 512);
-    	  row[x+512] = (n->occupancy +50);
+      for(x=-1*(width/2); x<width/2; x++) {
+    	  treeNode *n = getNode(x, y*(-1), t->treeRoot, 512);
+    	  occ = n->occupancy;
+    	  if(occ<0)
+    	  {
+    		  row[x+width/2] = 0;
+    	  }
+    	  else if(occ == 0)
+    	  {
+    		  row[x+width/2] = 100;
+    	  }
+    	  else
+    	  {
+    		  row[x+width/2] = 200;
+    	  }
+
+//    	  printf("printing  [%i][%i] = %i", x,y, n->occupancy+50);
       }
       png_write_row(png_ptr, row);
+
    }
 
    // End write
@@ -208,7 +225,7 @@ int main()
 		quadTree t = {&root,0,0};
 
 		int points[100][2];
-		for(int i = 0; i<100; i++)
+		for(int i = 0; i<2; i++)
 		{
 			points[i][0] = RandomInt(-512, 512);
 			points[i][1] = RandomInt(-512, 512);
@@ -218,16 +235,20 @@ int main()
 
 		}
 		printf("printing tree\n" );
-		int w = writeImage("testimg", 1024, 1024, "map", &t);
+		int w = writeImage("testing", 1024, 1024, "map", &t);
 		printf("w: %i\n", w);
 		printf("size of tree : %i \n", t.count);
 
 	}
-	treeNode root = {0,0,0,0,0};
-	quadTree t = {&root,0,0};
-	dataToImage("console_output.txt", &t);
-	int w = writeImage("testimg", 1024, 1024, "map", &t);
-	printf("w = %i\n", w);
+	if(test_collected_data)
+	{
+		treeNode root = {0,0,0,0,0};
+		quadTree t = {&root,0,0};
+		dataToImage("console_output.txt", &t);
+		int w = writeImage("testing_2", 1024, 1024, "map", &t);
+		printf("w = %i\n", w);
+		printf("size of tree : %i \n", t.count);
+	}
 	return 0;
 }
 //gcc -Wall test.c quadTree.c directionStack.c -o test -lpng

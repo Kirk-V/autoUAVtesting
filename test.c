@@ -129,19 +129,23 @@ void dataToImage(const char *filename, quadTree *t)
     while (fgets(line, MAX_LINE_LENGTH, file))
     {
         /* Print each line */
-        printf("line[%06d]: %s", ++line_count, line);
-        printf("%c\n", line[0]);
+//        printf("line[%06d]: %s", ++line_count, line);
+//        printf("%c\n", line[0]);
         if(line[0] == '-'){
         	char line2[MAX_LINE_LENGTH];
         	strncpy(line2, line+2, 10);
         	printf("line2: %s\n", line2);
 
         	char * token = strtok(line2, ", ");
-        	int x = atoi(token);
+        	int range_x = atoi(token);
         	token = strtok(NULL, " ");
-        	int y = atoi(token);
+        	int range_y  = atoi(token);
+        	token = strtok(NULL, " ");
+			int x = atoi(token);
+			token = strtok(NULL, " ");
+			int y = atoi(token);
         	printf("inserting (%i,%i)\n", x, y);
-        	updateTree(t, 0,0, x, y);
+        	updateTree(t, x,y, range_x , range_y );
         }
         /* Add a trailing newline to lines that don't already have one */
         if (line[strlen(line) - 1] != '\n')
@@ -244,9 +248,11 @@ int main()
 	{
 		treeNode root = {0,0,0,0,0};
 		quadTree t = {&root,0,0};
+
 		dataToImage("console_output.txt", &t);
 		int w = writeImage("testing_2", 1024, 1024, "map", &t);
 		printf("w = %i\n", w);
+//		printf("pointer to ne %p\n", (void*)root.ne);
 		printf("size of tree : %i \n", t.count);
 	}
 	return 0;

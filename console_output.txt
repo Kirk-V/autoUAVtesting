@@ -9,52 +9,91 @@ Hover Height not reached
 Hover Height not reached 
 Hover Height not reached 
 Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
 Hover Height reached! Switching to explore mode 
-Current State (u,f,l,r,b),(x,y,z), yaw) (2323, 199, 256, 579, 329), (0.012929, -0.008895, 0.000638), 0.064211 
-Current State (u,f,l,r,b),(x,y,z), yaw) (2323, 199, 256, 579, 329), (0.012929, -0.008895, 0.000638), -1.297785 
---219, -3
---180, 48
---156, 109
---101, 145
---42, 148
----5, 149
----47, 123
----34, 44
----37, 24
----36, 9
----35, -1
----115, -44
----66, -57
----50, -84
----11, -52
---12, -89
---69, -148
---82, -91
---164, -90
---221, -42
-left loop
-Moving from (0.014164,0.005296) forward 1000 to point (1.006840, 0.126107) yaw:6.938895
---61, 5
---27, 7
---27, 40
---20, 54
---5, 62
----29, 152
----81, 131
----109, 92
----57, 22
----55, 4
----50, -12
----44, -25
----93, -104
----42, -94
----8, -77
---22, -96
---118, -188
---102, -83
---124, -45
---223, -7
-Currently At: (-0.009732, -0.001168, 0.000638) yaw: -2.316092
-up is 2131
-left is2051
-Stopped
+Current State (u,f,l,r,b),(x,y,z), yaw) (2286, 279, 437, 212, 403), (0.011939, -0.401353, 0.002771), 0.524041 
+Got range coords
+--39, -1, 0, 0
+--4, 90, 0, 0
+--0, -28, 0, 0
+---41, -5, 0, 0
+Tree has 20 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2324, 230, 247, 249, 409), (0.104071, -0.501561, 0.002731), 37.325466 
+Got range coords
+--18, 13, 0, 0
+---13, 20, 0, 0
+--11, -21, 0, 0
+---37, -16, 0, 0
+Tree has 25 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2320, 230, 249, 250, 410), (0.191356, -0.576757, 0.003418), 19.159622 
+Got range coords
+--22, 7, 0, 0
+---10, 22, 0, 0
+--25, -6, 0, 0
+---12, -25, 0, 0
+Tree has 25 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2334, 209, 396, 275, 283), (0.546137, -0.620292, 0.000426), 57.238708 
+Got range coords
+--11, 17, 0, 0
+---30, 25, 0, 0
+--18, -20, 0, 0
+---13, -30, 0, 0
+Tree has 25 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2333, 193, 417, 209, 339), (0.602514, -0.548008, 0.004197), 57.526119 
+Got range coords
+--10, 15, 0, 0
+---32, 26, 0, 0
+--14, -15, 0, 0
+---26, -20, 0, 0
+Tree has 25 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2335, 190, 415, 207, 335), (0.680467, -0.561240, 0.003628), 30.315744 
+Got range coords
+--16, 9, 0, 0
+---18, 37, 0, 0
+--8, -19, 0, 0
+---31, -11, 0, 0
+Tree has 26 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2336, 193, 415, 203, 338), (0.720147, -0.545903, 0.004214), 16.494598 
+Got range coords
+--18, 5, 0, 0
+---9, 40, 0, 0
+--4, -20, 0, 0
+---33, -6, 0, 0
+Tree has 26 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2331, 191, 413, 209, 338), (0.748903, -0.513682, 0.002623), 9.305590 
+Got range coords
+--19, 3, 0, 0
+---5, 40, 0, 0
+--2, -20, 0, 0
+---33, -3, 0, 0
+Tree has 26 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2328, 191, 411, 211, 339), (0.749248, -0.553110, 0.003422), 5.498673 
+Got range coords
+--18, 1, 0, 0
+---2, 41, 0, 0
+--1, -20, 0, 0
+---33, -1, 0, 0
+Tree has 26 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2326, 193, 414, 208, 338), (0.797172, -0.668029, 0.004325), 3.208698 
+Got range coords
+--19, 0, 0, 0
+---1, 41, 0, 0
+--1, -20, 0, 0
+---33, -1, 0, 0
+Tree has 26 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (2330, 193, 412, 210, 339), (0.860120, -0.838534, 0.004305), 1.849195 
+Got range coords
+--19, 0, 0, 0
+--0, 41, 0, 0
+--0, -20, 0, 0
+---33, 0, 0, 0

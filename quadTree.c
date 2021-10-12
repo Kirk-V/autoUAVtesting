@@ -178,7 +178,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			}
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
-//			printf("recursing ne\n");
+			printf("recursing ne\n");
 			insertNode(tree, node->ne,  x-squareSize, y-squareSize, occupied, squareSize);
 		}
 		else
@@ -193,7 +193,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
-//			printf("recursing nw\n");
+			printf("recursing nw\n");
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
 			insertNode(tree, node->nw,  x+squareSize, y-squareSize, occupied, squareSize);
@@ -217,12 +217,13 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			}
 				//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
+			printf("SE = %p\n", (void*)node->se);
 			if(exists(node->se))
 			{
 //				printf("Made se\n");
 			}
 
-//			printf("recursing se\n");
+			printf("recursing se\n");
 			insertNode(tree, node->se,  x-squareSize, y+squareSize, occupied, squareSize);
 		}
 		else
@@ -239,7 +240,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			}
 			//now recurse down the tree with updated node and squareSize
 
-//			printf("recursing sw\n");
+			printf("recursing sw\n");
 			squareSize = squareSize/2;
 			insertNode(tree, node->sw,  x+squareSize, y+squareSize, occupied, squareSize);
 		}

@@ -56,6 +56,14 @@ void initTree(quadTree* tree)
 	tree->height = 0;
 }
 
+void initNode(treeNode *node){
+	node->nw = 0;
+	node->ne = 0;
+	node->sw = 0;
+	node->se = 0;
+	node->occupancy = 0;
+}
+
 
 void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point_y)
 {
@@ -71,7 +79,7 @@ void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point
 		for (int i = pos; i < point; i++)
 		{
 			y = y + m;
-			printf("Inserting NEW NODE: (%i, %f)\n",i, y);
+			// printf("Inserting NEW NODE: (%i, %f)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 
 		}
@@ -80,7 +88,7 @@ void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point
 		for (int i = pos; i > point; i--)
 		{
 			y = y - m;//c
-			printf("Inserting NEW NODE: (%i,%fd)\n",i, y);
+			// printf("Inserting NEW NODE: (%i,%fd)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 		}
 	}
@@ -105,9 +113,11 @@ void getNorthNeighbour(quadTree *tree, coord centerNode, treeNode *north)
 // check if nodes can be combined while propagating back
 void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, int squareSize) //recursive attempt so that pruning can be achieved
 {
-//	printf("square size: %i\n", squareSize);
+//	DEBUG_PRINT("square size: %i\n", squareSize);
 
 	if (!inRange(x, y)){
+		// DEBUG_PRINT("out of range\n");
+//		vTaskDelay(M2T(200));
 		return;
 	}
 
@@ -125,6 +135,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	{
 		if(node->occupancy <= -100)
 		{
+
 			return;
 		}
 
@@ -132,11 +143,9 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 
 
 	// If we have reached the smallest resolution, we must insert/update the node
-	if(squareSize <= resolution)
+	if(squareSize < resolution)
 	{
 		//space cannot be divided up further, we should update the node here
-//		printf("can't breakdown further\n");
-		printf(" inserting %i, %i--SS = %i---", x,y,squareSize);
 		if (occupied) //data says occupied
 		{
 			//add 10 to occupancy value of node
@@ -170,15 +179,26 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			{
 				// allocate mem for new node
 //				treeNode new;
-//				printf("Making ne node\n");
+//				DEBUG_PRINT("Making ne node\n");
 				node->ne = (treeNode*)malloc(sizeof(treeNode));
+				initNode(node->ne);
 				tree->count += 1;
-				printf("treeSize= %i\n", tree->count);
+//				DEBUG_PRINT("NE = %p\n", (void*)node->ne);
 //				*(node->ne) = new;
 			}
+			else{
+//				DEBUG_PRINT("NE = is already Made!%p\n", (void*)node->ne);
+			}
+			if(!exists(node->ne))
+			{
+//				DEBUG_PRINT("Can't make ne\n");
+				return;
+			}
+
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
-			printf("recursing ne\n");
+//			DEBUG_PRINT("NE = %p\n", (void*)node->ne);
+//			DEBUG_PRINT("recursing ne\n");
 			insertNode(tree, node->ne,  x-squareSize, y-squareSize, occupied, squareSize);
 		}
 		else
@@ -187,13 +207,22 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			{
 				// allocate mem for new node
 //				treeNode new;
-//				printf("Making nw node\n");
 				node->nw = (treeNode*)malloc(sizeof(treeNode));
+				initNode(node->nw);
 				tree->count += 1;
-				printf("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
-			printf("recursing nw\n");
+			else{
+//				DEBUG_PRINT("Nw = is already Made!%p\n", (void*)node->nw);
+			}
+			if(!exists(node->nw))
+			{
+//				DEBUG_PRINT("Can't make nw\n");
+				return;
+			}
+
+
+//			DEBUG_PRINT("recursing nw\n");
 			//now recurse down the tree with updated node and squareSize
 			squareSize = squareSize/2;
 			insertNode(tree, node->nw,  x+squareSize, y-squareSize, occupied, squareSize);
@@ -209,21 +238,26 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			{
 				// allocate mem for new node
 //				treeNode new;
-//				printf("Making se node\n");
+//				DEBUG_PRINT("Making se node\n");
 				node->se = (treeNode*)malloc(sizeof(treeNode));
+				initNode(node->se);
 				tree->count += 1;
-				printf("treeSize= %i\n", tree->count);
+//				DEBUG_PRINT("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
-				//now recurse down the tree with updated node and squareSize
-			squareSize = squareSize/2;
-			printf("SE = %p\n", (void*)node->se);
-			if(exists(node->se))
-			{
-//				printf("Made se\n");
+			else{
+//				DEBUG_PRINT("sE = is already Made!%p\n", (void*)node->se);
 			}
 
-			printf("recursing se\n");
+				//now recurse down the tree with updated node and squareSize
+			squareSize = squareSize/2;
+			if(!exists(node->se))
+			{
+//				DEBUG_PRINT("Can't make se\n");
+				return;
+			}
+
+//			DEBUG_PRINT("recursing se\n");
 			insertNode(tree, node->se,  x-squareSize, y+squareSize, occupied, squareSize);
 		}
 		else
@@ -232,15 +266,25 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 			{
 				// allocate mem for new node
 //				treeNode new;
-//				printf("Making sw node\n");
+//				DEBUG_PRINT("Making sw node\n");
 				node->sw = (treeNode*)malloc(sizeof(treeNode));
+				initNode(node->sw);
 				tree->count += 1;
-				printf("treeSize= %i\n", tree->count);
+//				DEBUG_PRINT("treeSize= %i\n", tree->count);
 //				*(node->ne) = new;
 			}
+			else{
+//				DEBUG_PRINT("sw = is already Made!%p\n", (void*)node->sw);
+			}
+			if(!exists(node->sw))
+			{
+//				DEBUG_PRINT("Can't make sw\n");
+				return;
+			}
+
 			//now recurse down the tree with updated node and squareSize
 
-			printf("recursing sw\n");
+//			DEBUG_PRINT("recursing sw\n");
 			squareSize = squareSize/2;
 			insertNode(tree, node->sw,  x+squareSize, y+squareSize, occupied, squareSize);
 		}
@@ -249,19 +293,24 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	//check if we can now prune
 	if((node->nw) && (node->sw) && (node->ne) && (node->se))
 	{
+//		DEBUG_PRINT("Pruning\n");
+//		vTaskDelay(M2T(1000));
 		bool pruned = prune(node);
 		if(pruned)
 		{
+//			DEBUG_PRINT("Pruning\n");
 			node->nw = 0;
 			node->ne = 0;
 			node->sw = 0;
 			node->se = 0;
-			printf("pruned!\n");
 			tree->count -=4;
+//			DEBUG_PRINT("Pruned\n");
+//			vTaskDelay(M2T(1000));
 		}
 	}
 	return;
 }
+
 
 //returns a pointer to the node at specified (x,y), could not be at lowest resolution if tree is not fully
 //decomposed at that point returns 0 if out of range.

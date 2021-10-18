@@ -28,8 +28,7 @@ typedef struct qTree{
 	int count; //#of nodes
 	int height;
 } quadTree;
-
-
+void initNode(treeNode *node);
 int round10(int n);
 bool inRange(int x, int y);
 void initTree(quadTree* tree);

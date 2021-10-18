@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#include <malloc.h>
+
 #include <string.h>
 
 #define MAX_LINE_LENGTH 1024
@@ -129,23 +129,27 @@ void dataToImage(const char *filename, quadTree *t)
     while (fgets(line, MAX_LINE_LENGTH, file))
     {
         /* Print each line */
-//        printf("line[%06d]: %s", ++line_count, line);
+       printf("line[%06d]: %s", ++line_count, line);
 //        printf("%c\n", line[0]);
         if(line[0] == '-'){
         	char line2[MAX_LINE_LENGTH];
-        	strncpy(line2, line+2, 10);
+        	strncpy(line2, line+2, 20);
         	printf("line2: %s\n", line2);
 
         	char * token = strtok(line2, ", ");
         	int range_x = atoi(token);
-        	token = strtok(NULL, " ");
+
+        	token = strtok(NULL, ", ");
         	int range_y  = atoi(token);
-        	token = strtok(NULL, " ");
+
+        	token = strtok(NULL, ", ");
 			int x = atoi(token);
-			token = strtok(NULL, " ");
+
+			token = strtok(NULL, ", ");
 			int y = atoi(token);
-        	printf("inserting (%i,%i)\n", x, y);
-        	updateTree(t, x,y, range_x , range_y );
+
+        	printf("inserting (%i,%i)\n", range_x, range_y);
+        	updateTree(t, x, y, range_x , range_y);
         }
         /* Add a trailing newline to lines that don't already have one */
         if (line[strlen(line) - 1] != '\n')

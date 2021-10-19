@@ -1,0 +1,431 @@
+SYS: ----------------------------
+SYS: Crazyflie 2.1 is up and running!
+SYS: Build 247:a353d74ab947 (2021.03 +247) MODIFIED
+SYS: I am 0x20373357594B500700420053 and I have 1024KB of flash!
+CFGBLK: v1, verification [OK]
+DECK_CORE: 2 deck(s) found
+DECK_CORE: Calling INIT on driver bcFlow2 for deck 0
+ZR2: Z-down sensor [OK]
+PMW: Motion chip id: 0x49:0xB6
+DECK_CORE: Calling INIT on driver bcMultiranger for deck 1
+IMU: BMI088: Using I2C interface.
+IMU: BMI088 Gyro connection [OK].
+IMU: BMI088 Accel connection [OK]
+IMU: BMP388 I2C connection [OK]
+ESTIMATOR: Using Kalman (2) estimator
+CONTROLLER: Using PID (1) controller
+MTR-DRV: Using brushed motor driver
+SYS: About to run tests in system.c.
+EEPROM: I2C connection [OK].
+STORAGE: Storage check [OK].
+IMU: BMI088 gyro self-test [OK]
+DECK_CORE: Deck 0 test [OK].
+MR: Init front sensor [OK]
+MR: Init back sensor [OK]
+MR: Init up sensor [OK]
+MR: Init left sensor [OK]
+MR: Init right sensor [OK]
+DECK_CORE: Deck 1 test [OK].
+SYS: Self test passed!
+STAB: Wait for sensor calibration...
+SYS: Free heap: 16360 bytes
+Hello World!
+Waiting for activation ...
+root occpancy 0 ...
+map occpancy 0 ...
+root->ne is 0
+ne: 
+nw: 
+se: 
+sw: 
+STAB: Ready to fly.
+Waiting for hand to be removed!
+Unlocked!
+unlocked, starting to hover
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height reached! Switching to explore mode 
+Current State (u,f,l,r,b),(x,y,z), yaw) (2333, 170, 356, 176, 205), (0.040128, -0.081417, 0.000126), -0.417296 
+ITER = 0
+FRONT-----:
+--170, 0, 1, 0
+Tree has 24 nodes
+action: 0
+Navigation: Forward
+Moving from (0.011439,0.002900) forward 100 to point (0.111429, 0.001540) yaw:-0.779522
+Currently At: (0.011439, 0.002900, 0.000126) yaw: -0.779522
+Current State (u,f,l,r,b),(x,y,z), yaw) (2121, 1539, 817, 1201, 877), (-0.001699, 0.004387, 0.223499), -3.745539 
+ITER = 1
+LEFT-----:
+--6, 83, 2, 0
+Tree has 35 nodes
+action: 0
+Navigation: Forward
+Moving from (0.029027,0.002441) forward 100 to point (0.128898, -0.002635) yaw:-2.909999
+Currently At: (0.029027, 0.002441, 0.223499) yaw: -2.909999
+Current State (u,f,l,r,b),(x,y,z), yaw) (2119, 1555, 905, 2122, 980), (0.120644, -0.020612, 0.228137), -1.512448 
+ITER = 2
+RIGHT-----:
+--4, -219, 12, -2
+Tree has 47 nodes
+action: 0
+Navigation: Forward
+Moving from (0.124338,-0.021689) forward 100 to point (0.224275, -0.025231) yaw:-2.029874
+Currently At: (0.124338, -0.021689, 0.228137) yaw: -2.029874
+Current State (u,f,l,r,b),(x,y,z), yaw) (2104, 1507, 902, 2133, 1003), (0.136476, -0.008522, 0.228260), -1.696040 
+ITER = 3
+BACK-----:
+---85, 3, 15, 0
+Tree has 67 nodes
+action: 0
+Navigation: Forward
+Moving from (0.159984,-0.008955) forward 100 to point (0.259960, -0.011119) yaw:-1.239758
+Currently At: (0.159984, -0.008955, 0.228260) yaw: -1.239758
+Current State (u,f,l,r,b),(x,y,z), yaw) (2106, 1458, 886, 2229, 1074), (0.234193, -0.017859, 0.224268), -1.415628 
+ITER = 0
+FRONT-----:
+--167, -3, 24, -1
+Tree has 67 nodes
+action: 0
+Navigation: Forward
+Moving from (0.242142,-0.017323) forward 100 to point (0.342112, -0.019754) yaw:-1.393119
+Currently At: (0.242142, -0.017323, 0.224268) yaw: -1.393119
+Current State (u,f,l,r,b),(x,y,z), yaw) (2103, 1444, 484, 2210, 1118), (0.272516, -0.001517, 0.227102), -1.590919 
+ITER = 1
+LEFT-----:
+--30, 38, 29, 0
+Tree has 68 nodes
+action: 0
+Navigation: Forward
+Moving from (0.294490,-0.003551) forward 100 to point (0.394455, -0.006198) yaw:-1.517101
+Currently At: (0.294490, -0.003551, 0.227102) yaw: -1.517101
+Current State (u,f,l,r,b),(x,y,z), yaw) (2105, 1350, 340, 2285, 1182), (0.364754, -0.016150, 0.218628), -2.044109 
+ITER = 2
+RIGHT-----:
+--29, -229, 37, -1
+Tree has 76 nodes
+action: 0
+Navigation: Forward
+Moving from (0.378611,-0.018643) forward 100 to point (0.478543, -0.022323) yaw:-2.108635
+Currently At: (0.378611, -0.018643, 0.218628) yaw: -2.108635
+Current State (u,f,l,r,b),(x,y,z), yaw) (2105, 1356, 339, 2182, 1218), (0.414610, -0.009607, 0.213681), -1.205831 
+ITER = 3
+BACK-----:
+---81, 5, 43, -1
+Tree has 77 nodes
+action: 0
+Navigation: Forward
+Moving from (0.435585,-0.012237) forward 100 to point (0.535502, -0.016315) yaw:-2.337285
+Currently At: (0.435585, -0.012237, 0.213681) yaw: -2.337285
+Current State (u,f,l,r,b),(x,y,z), yaw) (2110, 1175, 385, 250, 1229), (0.495910, -0.029207, 0.209896), -0.641630 
+ITER = 0
+FRONT-----:
+--172, -2, 50, -2
+Tree has 77 nodes
+action: 0
+Navigation: Forward
+Moving from (0.507804,-0.023625) forward 100 to point (0.607793, -0.025132) yaw:-0.863157
+Currently At: (0.507804, -0.023625, 0.209896) yaw: -0.863157
+Current State (u,f,l,r,b),(x,y,z), yaw) (2103, 1094, 398, 229, 1314), (0.555445, -0.028752, 0.214873), -2.235117 
+ITER = 1
+LEFT-----:
+--59, 37, 57, -3
+Tree has 81 nodes
+action: 0
+Navigation: Forward
+Moving from (0.573966,-0.038057) forward 100 to point (0.673849, -0.042901) yaw:-2.776603
+Currently At: (0.573966, -0.038057, 0.214873) yaw: -2.776603
+Current State (u,f,l,r,b),(x,y,z), yaw) (2116, 433, 431, 167, 1341), (0.611185, -0.057358, 0.213012), -3.415771 
+ITER = 2
+RIGHT-----:
+--61, -20, 62, -5
+Tree has 79 nodes
+action: 0
+Navigation: Forward
+Moving from (0.623163,-0.054068) forward 100 to point (0.722941, -0.060730) yaw:-3.819577
+Currently At: (0.623163, -0.054068, 0.213012) yaw: -3.819577
+Current State (u,f,l,r,b),(x,y,z), yaw) (2119, 499, 419, 158, 1395), (0.658899, -0.017366, 0.208121), -4.336532 
+ITER = 3
+BACK-----:
+---79, 11, 67, -1
+Tree has 86 nodes
+action: 0
+Navigation: Forward
+Moving from (0.672982,-0.019222) forward 100 to point (0.772666, -0.027159) yaw:-4.552788
+Currently At: (0.672982, -0.019222, 0.208121) yaw: -4.552788
+Current State (u,f,l,r,b),(x,y,z), yaw) (2126, 194, 484, 63, 1439), (0.741302, -0.072174, 0.206168), -3.440760 
+ITER = 0
+FRONT-----:
+--95, -7, 75, -5
+Tree has 86 nodes
+stateSet: turnRight
+action: 1
+Navigation: Turning
+Turning Left to setpoint (0.772666, -0.027159) yaw: 5.447211 
+Currently At: (0.755630, -0.057601, 0.206168) yaw: -6.561370
+Current State (u,f,l,r,b),(x,y,z), yaw) (2113, 277, 459, 96, 1474), (0.777378, -0.030525, 0.201966), -0.841489 
+ITER = 1
+LEFT-----:
+--74, 41, 77, -3
+Tree has 92 nodes
+stateSet: turnRight
+action: 1
+Navigation: Turning
+Turning Left to setpoint (0.772666, -0.027159) yaw: 15.447211 
+Currently At: (0.775948, -0.033451, 0.201966) yaw: 3.685060
+Current State (u,f,l,r,b),(x,y,z), yaw) (2138, 1015, 420, 105, 1581), (0.807940, -0.003885, 0.191151), 16.365579 
+ITER = 2
+RIGHT-----:
+--83, -11, 80, 0
+Tree has 92 nodes
+action: 0
+Navigation: Forward
+Moving from (0.804516,0.003580) forward 100 to point (0.899972, 0.033383) yaw:17.339063
+Currently At: (0.804516, 0.003580, 0.191151) yaw: 17.339063
+Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 1067, 414, 113, 1546), (0.756306, -0.020305, 0.200679), 17.423297 
+ITER = 3
+BACK-----:
+---72, -44, 78, -1
+Tree has 97 nodes
+action: 0
+Navigation: Forward
+Moving from (0.787714,-0.012332) forward 100 to point (0.883725, 0.015630) yaw:16.237981
+Currently At: (0.787714, -0.012332, 0.200679) yaw: 16.237981
+Current State (u,f,l,r,b),(x,y,z), yaw) (2134, 916, 387, 137, 1643), (0.922081, 0.039439, 0.203073), 16.911479 
+ITER = 0
+FRONT-----:
+--176, 30, 90, 2
+Tree has 109 nodes
+action: 0
+Navigation: Forward
+Moving from (0.909650,0.028382) forward 100 to point (1.004634, 0.059655) yaw:18.224306
+Currently At: (0.909650, 0.028382, 0.203073) yaw: 18.224306
+Current State (u,f,l,r,b),(x,y,z), yaw) (2138, 977, 427, 106, 1646), (0.869471, -0.008125, 0.205457), 20.219543 
+ITER = 1
+LEFT-----:
+--77, 39, 90, 1
+Tree has 107 nodes
+action: 0
+Navigation: Forward
+Moving from (0.900775,0.014764) forward 100 to point (0.995800, 0.045912) yaw:18.148622
+Currently At: (0.900775, 0.014764, 0.205457) yaw: 18.148622
+Current State (u,f,l,r,b),(x,y,z), yaw) (2111, 830, 372, 164, 1819), (1.009441, 0.083358, 0.205687), 22.271286 
+ITER = 2
+RIGHT-----:
+--105, -10, 99, 6
+Tree has 107 nodes
+action: 0
+Navigation: Forward
+Moving from (0.991147,0.067763) forward 100 to point (1.084029, 0.104816) yaw:21.748575
+Currently At: (0.991147, 0.067763, 0.205687) yaw: 21.748575
+Current State (u,f,l,r,b),(x,y,z), yaw) (2126, 886, 418, 122, 1710), (0.977920, 0.028544, 0.203085), 23.848936 
+ITER = 3
+BACK-----:
+---40, -60, 101, 5
+Tree has 110 nodes
+action: 0
+Navigation: Forward
+Moving from (1.011478,0.054932) forward 100 to point (1.102046, 0.097329) yaw:25.085754
+Currently At: (1.011478, 0.054932, 0.203085) yaw: 25.085754
+Current State (u,f,l,r,b),(x,y,z), yaw) (2128, 752, 334, 450, 1832), (1.085166, 0.154956, 0.200579), 21.272327 
+ITER = 0
+FRONT-----:
+--178, 43, 108, 15
+Tree has 113 nodes
+action: 0
+Navigation: Forward
+Moving from (1.087594,0.153448) forward 100 to point (1.179806, 0.192140) yaw:22.762964
+Currently At: (1.087594, 0.153448, 0.200579) yaw: 22.762964
+Current State (u,f,l,r,b),(x,y,z), yaw) (2116, 744, 394, 2156, 1334), (1.116291, 0.108124, 0.210397), 22.459325 
+ITER = 1
+LEFT-----:
+--98, 47, 113, 13
+Tree has 113 nodes
+action: 0
+Navigation: Forward
+Moving from (1.132325,0.135939) forward 100 to point (1.224174, 0.175484) yaw:23.294195
+Currently At: (1.132325, 0.135939, 0.210397) yaw: 23.294195
+Current State (u,f,l,r,b),(x,y,z), yaw) (2128, 650, 387, 1601, 1751), (1.200051, 0.188667, 0.198641), 20.892278 
+ITER = 2
+RIGHT-----:
+--182, -151, 121, 17
+Tree has 127 nodes
+action: 0
+Navigation: Forward
+Moving from (1.214659,0.170838) forward 100 to point (1.308727, 0.204767) yaw:19.833604
+Currently At: (1.214659, 0.170838, 0.198641) yaw: 19.833604
+Current State (u,f,l,r,b),(x,y,z), yaw) (2119, 595, 440, 1704, 2007), (1.256194, 0.198188, 0.200394), 18.919637 
+ITER = 3
+BACK-----:
+---63, -43, 127, 19
+Tree has 128 nodes
+action: 0
+Navigation: Forward
+Moving from (1.276589,0.199458) forward 100 to point (1.371526, 0.230872) yaw:18.308773
+Currently At: (1.276589, 0.199458, 0.200394) yaw: 18.308773
+Current State (u,f,l,r,b),(x,y,z), yaw) (2130, 517, 416, 1766, 2060), (1.339617, 0.202435, 0.200740), 20.405975 
+ITER = 0
+FRONT-----:
+--182, 38, 135, 20
+Tree has 129 nodes
+action: 0
+Navigation: Forward
+Moving from (1.356276,0.208204) forward 100 to point (1.449603, 0.244122) yaw:21.050214
+Currently At: (1.356276, 0.208204, 0.200740) yaw: 21.050214
+Current State (u,f,l,r,b),(x,y,z), yaw) (2129, 471, 406, 1792, 2115), (1.399989, 0.222472, 0.198344), 18.110261 
+ITER = 1
+LEFT-----:
+--127, 60, 142, 22
+Tree has 132 nodes
+action: 0
+Navigation: Forward
+Moving from (1.421834,0.221515) forward 100 to point (1.515615, 0.256230) yaw:20.313009
+Currently At: (1.421834, 0.221515, 0.198344) yaw: 20.313009
+Current State (u,f,l,r,b),(x,y,z), yaw) (2136, 427, 415, 1609, 1023), (1.445020, 0.240892, 0.195828), 22.668754 
+ITER = 2
+RIGHT-----:
+--205, -125, 145, 24
+Tree has 136 nodes
+action: 0
+Navigation: Forward
+Moving from (1.454053,0.244844) forward 100 to point (1.547369, 0.280790) yaw:21.067363
+Currently At: (1.454053, 0.244844, 0.195828) yaw: 21.067363
+Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 358, 417, 1625, 2017), (1.519582, 0.256575, 0.199981), 19.188608 
+ITER = 3
+BACK-----:
+---53, -38, 153, 25
+Tree has 142 nodes
+action: 0
+Navigation: Forward
+Moving from (1.530044,0.259365) forward 100 to point (1.625164, 0.290221) yaw:17.972980
+Currently At: (1.530044, 0.259365, 0.199981) yaw: 17.972980
+Current State (u,f,l,r,b),(x,y,z), yaw) (2117, 323, 388, 1488, 2147), (1.545912, 0.309903, 0.194865), 20.511079 
+ITER = 0
+FRONT-----:
+--184, 39, 156, 31
+Tree has 143 nodes
+action: 0
+Navigation: Forward
+Moving from (1.563182,0.312362) forward 100 to point (1.658648, 0.342133) yaw:17.320203
+Currently At: (1.563182, 0.312362, 0.194865) yaw: 17.320203
+Current State (u,f,l,r,b),(x,y,z), yaw) (2139, 216, 400, 1620, 2200), (1.666178, 0.305123, 0.189514), 15.936657 
+ITER = 1
+LEFT-----:
+--156, 69, 167, 32
+Tree has 148 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: 7.320203 
+Currently At: (1.672581, 0.325237, 0.189514) yaw: 16.427188
+Current State (u,f,l,r,b),(x,y,z), yaw) (2111, 225, 355, 1617, 2275), (1.648759, 0.349413, 0.194485), 10.007397 
+ITER = 2
+RIGHT-----:
+--188, -138, 164, 34
+Tree has 150 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: -2.679796 
+Currently At: (1.644383, 0.348470, 0.194485) yaw: 7.276871
+Current State (u,f,l,r,b),(x,y,z), yaw) (2127, 222, 368, 2198, 2099), (1.660152, 0.343048, 0.207080), 1.754158 
+ITER = 3
+BACK-----:
+---10, 36, 165, 33
+Tree has 155 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: -12.679796 
+Currently At: (1.658722, 0.338834, 0.207080) yaw: -0.620219
+Current State (u,f,l,r,b),(x,y,z), yaw) (2121, 250, 408, 2549, 897), (1.642465, 0.329030, 0.206682), -8.941977 
+ITER = 0
+FRONT-----:
+--189, 27, 164, 32
+Tree has 155 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: -22.679796 
+Currently At: (1.643666, 0.328846, 0.206682) yaw: -11.308376
+Current State (u,f,l,r,b),(x,y,z), yaw) (2121, 252, 425, 2177, 648), (1.660439, 0.330134, 0.201669), -17.869051 
+ITER = 1
+LEFT-----:
+--181, 68, 166, 32
+Tree has 158 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: -32.679794 
+Currently At: (1.669111, 0.328668, 0.201669) yaw: -22.738176
+Current State (u,f,l,r,b),(x,y,z), yaw) (2131, 272, 350, 844, 595), (1.667661, 0.345705, 0.196781), -28.103162 
+ITER = 2
+RIGHT-----:
+--126, -34, 166, 34
+Tree has 159 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.658648, 0.342133) yaw: -42.679794 
+Currently At: (1.666021, 0.348906, 0.196781) yaw: -30.997602
+Current State (u,f,l,r,b),(x,y,z), yaw) (2132, 365, 313, 710, 518), (1.648662, 0.340319, 0.198502), -38.941322 
+ITER = 3
+BACK-----:
+--132, 65, 164, 34
+Tree has 157 nodes
+action: 0
+Navigation: Forward
+Moving from (1.645802,0.347932) forward 100 to point (1.717603, 0.278329) yaw:-44.109748
+Currently At: (1.645802, 0.347932, 0.198502) yaw: -44.109748
+Current State (u,f,l,r,b),(x,y,z), yaw) (2138, 432, 273, 605, 433), (1.656362, 0.339359, 0.197292), -45.430953 
+ITER = 0
+FRONT-----:
+--196, 1, 167, 31
+Tree has 160 nodes
+action: 0
+Navigation: Forward
+Moving from (1.671639,0.318821) forward 100 to point (1.741533, 0.247302) yaw:-45.658134
+Currently At: (1.671639, 0.318821, 0.197292) yaw: -45.658134
+Current State (u,f,l,r,b),(x,y,z), yaw) (2113, 442, 240, 609, 505), (1.699512, 0.258691, 0.197455), -49.092342 
+ITER = 1
+LEFT-----:
+--187, 40, 170, 25
+Tree has 160 nodes
+action: 0
+Navigation: Forward
+Moving from (1.705311,0.250235) forward 100 to point (1.773105, 0.176723) yaw:-47.317176
+Currently At: (1.705311, 0.250235, 0.197455) yaw: -47.317176
+Current State (u,f,l,r,b),(x,y,z), yaw) (2124, 358, 212, 653, 538), (1.737018, 0.245512, 0.201175), -47.177131 
+ITER = 2
+RIGHT-----:
+--125, -22, 174, 23
+Tree has 162 nodes
+action: 0
+Navigation: Forward
+Moving from (1.748835,0.232057) forward 100 to point (1.816486, 0.158414) yaw:-47.428176
+Currently At: (1.748835, 0.232057, 0.201175) yaw: -47.428176
+Current State (u,f,l,r,b),(x,y,z), yaw) (2077, 342, 206, 677, 620), (1.771684, 0.181735, 0.195462), -47.959831 
+ITER = 3
+BACK-----:
+--135, 63, 178, 16
+Tree has 166 nodes
+action: 0
+Navigation: Forward
+Moving from (1.788190,0.168280) forward 100 to point (1.855126, 0.093986) yaw:-47.982318
+Currently At: (1.788190, 0.168280, 0.195462) yaw: -47.982318
+Current State (u,f,l,r,b),(x,y,z), yaw) (2076, 235, 131, 728, 686), (1.833265, 0.112288, 0.199686), -48.486713 
+ITER = 0
+FRONT-----:
+--199, -7, 184, 10
+Tree has 166 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (1.855126, 0.093986) yaw: -57.982318 
+Currently At: (1.840120, 0.104489, 0.199686) yaw: -48.848163

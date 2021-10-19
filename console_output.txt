@@ -1,4 +1,164 @@
-
+Waiting for hand to be removed!
+Unlocked!
+unlocked, starting to hover
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height not reached 
+Hover Height reached! Switching to explore mode 
+Current State (u,f,l,r,b),(x,y,z), yaw) (2317, 312, 194, 255, 209), (0.112605, 0.003743, 0.008832), 0.388039 
+ITER = 0
+FRONT-----:
+--107, 0, 0, 0
+Tree has 16 nodes
+action: 0
+Navigation: Forward
+Moving from (-0.003486,0.009188) forward 100 to point (0.096513, 0.009208) yaw:0.011510
+Currently At: (-0.003486, 0.009188, 0.008832) yaw: 0.011510
+Current State (u,f,l,r,b),(x,y,z), yaw) (2111, 1062, 257, 308, 1609), (0.021436, -0.012170, 0.219431), -0.513176 
+ITER = 1
+LEFT-----:
+--4, 25, 4, -1
+Tree has 22 nodes
+action: 0
+Navigation: Forward
+Moving from (0.045171,-0.018930) forward 100 to point (0.145162, -0.020233) yaw:-0.746829
+Currently At: (0.045171, -0.018930, 0.219431) yaw: -0.746829
+Current State (u,f,l,r,b),(x,y,z), yaw) (2107, 980, 250, 289, 1672), (0.103148, -0.008762, 0.221263), -3.048485 
+ITER = 2
+RIGHT-----:
+--9, -29, 11, -1
+Tree has 23 nodes
+action: 0
+Navigation: Forward
+Moving from (0.113883,-0.014483) forward 100 to point (0.213755, -0.019544) yaw:-2.900754
+Currently At: (0.113883, -0.014483, 0.221263) yaw: -2.900754
+Current State (u,f,l,r,b),(x,y,z), yaw) (2107, 926, 267, 275, 1777), (0.160630, -0.029498, 0.222701), -2.485818 
+ITER = 3
+BACK-----:
+---162, 10, 17, -2
+Tree has 53 nodes
+action: 0
+Navigation: Forward
+Moving from (0.179450,-0.025503) forward 100 to point (0.279307, -0.030837) yaw:-3.057411
+Currently At: (0.179450, -0.025503, 0.222701) yaw: -3.057411
+Current State (u,f,l,r,b),(x,y,z), yaw) (2119, 873, 262, 282, 1856), (0.223766, -0.034266, 0.216270), -2.381700 
+ITER = 0
+FRONT-----:
+--109, -3, 24, -3
+Tree has 53 nodes
+action: 0
+Navigation: Forward
+Moving from (0.243470,-0.034509) forward 100 to point (0.343462, -0.035787) yaw:-0.732322
+Currently At: (0.243470, -0.034509, 0.216270) yaw: -0.732322
+Current State (u,f,l,r,b),(x,y,z), yaw) (2107, 812, 252, 293, 1912), (0.294089, -0.028014, 0.219811), 0.353030 
+ITER = 1
+LEFT-----:
+--29, 23, 30, -2
+Tree has 54 nodes
+action: 0
+Navigation: Forward
+Moving from (0.301704,-0.024162) forward 100 to point (0.401688, -0.022369) yaw:1.027443
+Currently At: (0.301704, -0.024162, 0.219811) yaw: 1.027443
+Current State (u,f,l,r,b),(x,y,z), yaw) (2108, 759, 235, 304, 1919), (0.353229, -0.014925, 0.221907), 0.650430 
+ITER = 2
+RIGHT-----:
+--38, -31, 37, 0
+Tree has 55 nodes
+action: 0
+Navigation: Forward
+Moving from (0.371193,-0.005843) forward 100 to point (0.471174, -0.003891) yaw:1.118490
+Currently At: (0.371193, -0.005843, 0.221907) yaw: 1.118490
+Current State (u,f,l,r,b),(x,y,z), yaw) (2113, 721, 207, 332, 2037), (0.389017, 0.012984, 0.212135), 1.071951 
+ITER = 3
+BACK-----:
+---191, 0, 40, 0
+Tree has 67 nodes
+action: 0
+Navigation: Forward
+Moving from (0.403197,0.006461) forward 100 to point (0.503183, 0.008128) yaw:0.955085
+Currently At: (0.403197, 0.006461, 0.212135) yaw: 0.955085
+Current State (u,f,l,r,b),(x,y,z), yaw) (2112, 618, 220, 310, 2035), (0.498028, -0.027282, 0.215247), -2.753041 
+ITER = 0
+FRONT-----:
+--110, -3, 50, -2
+Tree has 67 nodes
+action: 0
+Navigation: Forward
+Moving from (0.501059,-0.027224) forward 100 to point (0.601007, -0.030423) yaw:-1.833304
+Currently At: (0.501059, -0.027224, 0.215247) yaw: -1.833304
+Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 618, 183, 356, 2164), (0.507277, 0.009117, 0.208318), -0.605954 
+ITER = 1
+LEFT-----:
+--53, 18, 53, 0
+Tree has 69 nodes
+action: 0
+Navigation: Forward
+Moving from (0.537240,0.003533) forward 100 to point (0.637230, 0.002135) yaw:-0.800919
+Currently At: (0.537240, 0.003533, 0.208318) yaw: -0.800919
+Current State (u,f,l,r,b),(x,y,z), yaw) (2122, 505, 216, 1167, 2080), (0.613385, -0.044000, 0.207335), -1.791412 
+ITER = 2
+RIGHT-----:
+--58, -119, 61, -3
+Tree has 76 nodes
+action: 0
+Navigation: Forward
+Moving from (0.615661,-0.032960) forward 100 to point (0.715606, -0.036283) yaw:-1.904108
+Currently At: (0.615661, -0.032960, 0.207335) yaw: -1.904108
+Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 478, 175, 1249, 2250), (0.659869, 0.024058, 0.208903), -2.520802 
+ITER = 3
+BACK-----:
+---158, 9, 67, 2
+Tree has 90 nodes
+action: 0
+Navigation: Forward
+Moving from (0.677805,0.020307) forward 100 to point (0.777772, 0.017754) yaw:-1.462937
+Currently At: (0.677805, 0.020307, 0.208903) yaw: -1.462937
+Current State (u,f,l,r,b),(x,y,z), yaw) (2111, 423, 190, 1241, 2377), (0.722622, -0.027681, 0.208589), -0.761344 
+ITER = 0
+FRONT-----:
+--114, -2, 73, -2
+Tree has 91 nodes
+action: 0
+Navigation: Forward
+Moving from (0.735983,-0.027679) forward 100 to point (0.835979, -0.028508) yaw:-0.474738
+Currently At: (0.735983, -0.027679, 0.208589) yaw: -0.474738
+Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 355, 166, 1270, 2339), (0.798096, 0.014102, 0.205962), -3.288332 
+ITER = 1
+LEFT-----:
+--82, 16, 81, 0
+Tree has 92 nodes
+action: 0
+Navigation: Forward
+Moving from (0.816232,0.004055) forward 100 to point (0.915989, -0.002904) yaw:-3.990774
+Currently At: (0.816232, 0.004055, 0.205962) yaw: -3.990774
+Current State (u,f,l,r,b),(x,y,z), yaw) (2138, 301, 181, 1230, 2166), (0.840344, -0.043693, 0.179974), -7.428195 
+ITER = 2
+RIGHT-----:
+--66, -124, 86, -2
+Tree has 99 nodes
+action: 0
+Navigation: Forward
+Moving from (0.864427,-0.028412) forward 100 to point (0.963119, -0.044532) yaw:-9.276453
+Currently At: (0.864427, -0.028412, 0.179974) yaw: -9.276453
+Current State (u,f,l,r,b),(x,y,z), yaw) (2251, 284, 180, 1245, 2583), (0.880719, -0.047498, 0.095598), -13.370750 
+ITER = 3
+BACK-----:
+---161, 73, 96, 0
+Tree has 104 nodes
+stateSet: turnRight
+action: 2
+Navigation: Turning
+Turning Right to setpoint (0.963119, -0.044532) yaw: -19.276453 
+Currently At: (0.966310, -0.005743, 0.095598) yaw: -15.409841
+Current State (u,f,l,r,b),(x,y,z), yaw) (2352, 215, 155, 1278, 701), (1.030196, 0.021091, 0.063102), -24.045671 
+ITER = 0
+FRONT-----:
+ESTKALMAN: WARNING: Kalman prediction rate low (95)
 SYS: ----------------------------
 SYS: Crazyflie 2.1 is up and running!
 SYS: Build 247:a353d74ab947 (2021.03 +247) MODIFIED
@@ -41,343 +201,62 @@ se:
 sw: 
 STAB: Ready to fly.
 Waiting for hand to be removed!
+ESTKALMAN: State out of bounds, resetting
+ESTKALMAN: State out of bounds, resetting
+ESTKALMAN: State out of bounds, resetting
 Unlocked!
 unlocked, starting to hover
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
-Hover Height not reached 
 Hover Height reached! Switching to explore mode 
-Current State (u,f,l,r,b),(x,y,z), yaw) (2338, 227, 313, 956, 257), (0.000349, -0.004159, 0.003457), -0.132916 
-Got range coords
---65, 0, 0, 0
-Tree has 8 nodes
+Current State (u,f,l,r,b),(x,y,z), yaw) (961, 1825, 1089, 1955, 389), (-0.023799, -0.010578, 0.283405), 26.815347 
+ITER = 0
+FRONT-----:
+--155, 126, 0, 0
+Tree has 34 nodes
 action: 0
 Navigation: Forward
-Moving from (0.000027,0.010416) forward 100 to point (0.100027, 0.010062) yaw:-0.202812
-Currently At: (0.000027, 0.010416, 0.003457) yaw: -0.202812
-Current State (u,f,l,r,b),(x,y,z), yaw) (2102, 659, 1607, 729, 587), (0.017351, 0.012823, 0.224181), 0.425810 
-Got range coords
---64, 0, 0, 0
-Tree has 8 nodes
+Moving from (-0.004560,0.002514) forward 100 to point (0.072832, 0.065842) yaw:39.292537
+Currently At: (-0.004560, 0.002514, 0.283405) yaw: 39.292537
+Current State (u,f,l,r,b),(x,y,z), yaw) (1290, 2202, 1099, 387, 128), (4.267937, 1.334056, 0.203141), 9.521321 
+ITER = 1
+LEFT-----:
+--518, 284, 541, 177
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+out of range
+Tree has 34 nodes
 action: 0
 Navigation: Forward
-Moving from (0.039935,0.011311) forward 100 to point (0.139930, 0.012270) yaw:0.549648
-Currently At: (0.039935, 0.011311, 0.224181) yaw: 0.549648
-Current State (u,f,l,r,b),(x,y,z), yaw) (2058, 572, 1652, 811, 663), (0.101690, 0.017413, 0.225198), 0.540234 
-Got range coords
---57, 0, 0, 0
-Tree has 8 nodes
-action: 0
-Navigation: Forward
-Moving from (0.110973,0.019059) forward 100 to point (0.210959, 0.020705) yaw:0.942757
-Currently At: (0.110973, 0.019059, 0.225198) yaw: 0.942757
-Current State (u,f,l,r,b),(x,y,z), yaw) (2141, 532, 1675, 958, 707), (0.153756, 0.018725, 0.225871), 1.159870 
-Got range coords
---51, 0, 0, 0
-Tree has 8 nodes
-action: 0
-Navigation: Forward
-Moving from (0.172533,0.017327) forward 100 to point (0.272506, 0.019643) yaw:1.327116
-Currently At: (0.172533, 0.017327, 0.225871) yaw: 1.327116
-Current State (u,f,l,r,b),(x,y,z), yaw) (2107, 467, 1689, 1236, 778), (0.224726, 0.015660, 0.221217), 1.278620 
-Got range coords
---46, 0, 0, 0
-Tree has 8 nodes
-action: 0
-Navigation: Forward
-Moving from (0.236994,0.016775) forward 100 to point (0.336969, 0.018985) yaw:1.266201
-Currently At: (0.236994, 0.016775, 0.221217) yaw: 1.266201
-Current State (u,f,l,r,b),(x,y,z), yaw) (2140, 448, 1709, 1458, 836), (0.291127, 0.029330, 0.219725), 1.860311 
-Got range coords
---46, 1, 0, 0
-Tree has 13 nodes
-action: 0
-Navigation: Forward
-Moving from (0.309934,0.029679) forward 100 to point (0.409854, 0.033678) yaw:2.291706
-Currently At: (0.309934, 0.029679, 0.219725) yaw: 2.291706
-Current State (u,f,l,r,b),(x,y,z), yaw) (2131, 346, 1684, 1600, 886), (0.350477, 0.017748, 0.218205), 1.097397 
-Got range coords
---34, 0, 0, 0
-Tree has 13 nodes
-action: 0
-Navigation: Forward
-Moving from (0.366069,0.020115) forward 100 to point (0.466034, 0.022775) yaw:1.524486
-Currently At: (0.366069, 0.020115, 0.218205) yaw: 1.524486
-Current State (u,f,l,r,b),(x,y,z), yaw) (2147, 410, 1597, 1819, 952), (0.426671, 0.036583, 0.214949), 2.177442 
-Got range coords
---38, 0, 0, 0
-Tree has 13 nodes
-action: 0
-Navigation: Forward
-Moving from (0.439682,0.036773) forward 100 to point (0.539656, 0.039039) yaw:1.298874
-Currently At: (0.439682, 0.036773, 0.214949) yaw: 1.298874
-Current State (u,f,l,r,b),(x,y,z), yaw) (2144, 231, 782, 1864, 1008), (0.472216, 0.008655, 0.215412), -0.182156 
-Got range coords
---21, 0, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -8.701126 
-Currently At: (0.489181, 0.007758, 0.215412) yaw: 0.494950
-Current State (u,f,l,r,b),(x,y,z), yaw) (2110, 263, 723, 1747, 1078), (0.548006, 0.054683, 0.210522), -4.891343 
-Got range coords
---20, -2, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -18.701126 
-Currently At: (0.549151, 0.053495, 0.210522) yaw: -8.990293
-Current State (u,f,l,r,b),(x,y,z), yaw) (2123, 138, 1076, 1430, 1179), (0.549002, 0.019378, 0.203766), -15.501410 
-Got range coords
---12, -4, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -28.701126 
-Currently At: (0.554434, 0.023689, 0.203766) yaw: -19.520711
-Current State (u,f,l,r,b),(x,y,z), yaw) (2089, 156, 1097, 1179, 1418), (0.535531, 0.046076, 0.204028), -26.972568 
-Got range coords
---13, -7, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -38.701126 
-Currently At: (0.535419, 0.051192, 0.204028) yaw: -30.352314
-Current State (u,f,l,r,b),(x,y,z), yaw) (2142, 173, 1083, 1019, 1765), (0.528897, 0.035473, 0.204096), -35.936294 
-Got range coords
---15, -12, 0, 0
-Tree has 13 nodes
+Moving from (5.411034,1.775788) forward 100 to point (5.508495, 1.798178) yaw:12.938064
+Currently At: (5.411034, 1.775788, 0.203141) yaw: 12.938064
+Current State (u,f,l,r,b),(x,y,z), yaw) (1089, 2311, 94, 1609, 126), (12.044963, 1.497340, -0.031730), -156.722702 
+ESTKALMAN: State out of bounds, resetting
+ITER = 2
+RIGHT-----:
+---15, 24, 0, 0
+Tree has 41 nodes
+action: 6
+Navigation: Moving Right
+Currently At: (-0.007269, 0.001692, -0.031730) yaw: -147.815750
+Current State (u,f,l,r,b),(x,y,z), yaw) (1102, 148, 1368, 7, 1662), (0.228844, 0.011596, -0.100605), -95.682235 
+ITER = 3
+BACK-----:
+--47, 117, 90, -7
+Tree has 53 nodes
 stateSet: turnRight
 action: 1
 Navigation: Turning
-Turning Left to setpoint (0.539656, 0.039039) yaw: -28.701126 
-Currently At: (0.528768, 0.034494, 0.204096) yaw: -39.046558
-Current State (u,f,l,r,b),(x,y,z), yaw) (2165, 216, 957, 1030, 1823), (0.518845, 0.033571, 0.206935), -35.167144 
-Got range coords
---16, -9, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -38.701126 
-Currently At: (0.508807, 0.027336, 0.206935) yaw: -30.924400
-Current State (u,f,l,r,b),(x,y,z), yaw) (2165, 124, 1062, 1183, 1679), (0.568494, 0.030316, 0.198359), -32.623561 
-Got range coords
---8, -6, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -48.701126 
-Currently At: (0.576349, 0.029416, 0.198359) yaw: -37.380935
-Current State (u,f,l,r,b),(x,y,z), yaw) (2161, 187, 852, 1131, 1819), (0.529299, 0.036943, 0.197557), -44.621856 
-Got range coords
---14, -16, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -58.701126 
-Currently At: (0.528876, 0.038678, 0.197557) yaw: -48.639740
-Current State (u,f,l,r,b),(x,y,z), yaw) (2124, 236, 1252, 1781, 1674), (0.538343, 0.043193, 0.203672), -55.238811 
-Got range coords
---14, -22, 0, 0
-Tree has 13 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.539656, 0.039039) yaw: -68.701126 
-Currently At: (0.539674, 0.039359, 0.203672) yaw: -58.133956
-Current State (u,f,l,r,b),(x,y,z), yaw) (2089, 348, 1589, 1783, 1654), (0.532921, 0.031911, 0.198308), -63.895950 
-Got range coords
---17, -40, 0, 0
-Tree has 14 nodes
-action: 0
-Navigation: Forward
-Moving from (0.529472,0.034615) forward 100 to point (0.568950, -0.057262) yaw:-66.747856
-Currently At: (0.529472, 0.034615, 0.198308) yaw: -66.747856
-Current State (u,f,l,r,b),(x,y,z), yaw) (2139, 397, 1553, 1175, 1611), (0.543772, 0.032565, 0.196998), -66.521339 
-Got range coords
---14, -33, 0, 0
-Tree has 14 nodes
-action: 0
-Navigation: Forward
-Moving from (0.556451,0.009628) forward 100 to point (0.596336, -0.082073) yaw:-66.493759
-Currently At: (0.556451, 0.009628, 0.196998) yaw: -66.493759
-Current State (u,f,l,r,b),(x,y,z), yaw) (2155, 334, 1577, 1739, 1672), (0.573206, -0.064991, 0.199610), -65.051986 
-Got range coords
---13, -29, 0, 0
-Tree has 14 nodes
-action: 0
-Navigation: Forward
-Moving from (0.574879,-0.076078) forward 100 to point (0.616938, -0.166803) yaw:-65.128196
-Currently At: (0.574879, -0.076078, 0.199610) yaw: -65.128196
-Current State (u,f,l,r,b),(x,y,z), yaw) (2119, 310, 82, 1766, 1718), (0.591445, -0.103683, 0.200070), -64.971832 
-Got range coords
---12, -22, 0, 0
-Tree has 14 nodes
-stateSet: turnRight
-action: 2
-Navigation: Turning
-Turning Right to setpoint (0.616938, -0.166803) yaw: -75.128196 
-Currently At: (0.601494, -0.126431, 0.200070) yaw: -62.677215
-Current State (u,f,l,r,b),(x,y,z), yaw) (1894, 301, 54, 1757, 1825), (0.628138, -0.173950, 0.191200), -71.691139 
-Got range coords
---40, -162, 0, 0
-Tree has 20 nodes
-action: 6
-Navigation: Moving Right
-Currently At: (0.628239, -0.165440, 0.191200) yaw: -76.247268
-Current State (u,f,l,r,b),(x,y,z), yaw) (2072, 1861, 43, 1155, 892), (0.624757, -0.166093, 0.197994), -78.310081 
-Got range coords
---42, -182, 0, 0
-Tree has 20 nodes
-action: 6
-Navigation: Moving Right
-Currently At: (0.621219, -0.169067, 0.197994) yaw: -77.587127
-Current State (u,f,l,r,b),(x,y,z), yaw) (2158, 1896, 75, 1169, 1112), (0.582142, -0.174647, 0.207850), -77.702766 
-Got range coords
---46, -185, 0, 0
-Tree has 20 nodes
-action: 6
-Navigation: Moving Right
-Currently At: (0.560382, -0.180585, 0.207850) yaw: -76.986694
-Current State (u,f,l,r,b),(x,y,z), yaw) (2137, 1892, 150, 1387, 1778), (0.501477, -0.209956, 0.202339), -74.449256 
-Got range coords
---48, -181, 0, 0
-Tree has 20 nodes
-action: 0
-Navigation: Forward
-Moving from (0.488858,-0.216622) forward 100 to point (0.513277, -0.313595) yaw:-75.866287
-Currently At: (0.488858, -0.216622, 0.202339) yaw: -75.866287
-Current State (u,f,l,r,b),(x,y,z), yaw) (2144, 1776, 195, 1355, 1814), (0.466963, -0.218144, 0.194791), -73.511070 
-Got range coords
---56, -174, 0, 0
-Tree has 21 nodes
-action: 0
-Navigation: Forward
-Moving from (0.471566,-0.246636) forward 100 to point (0.501289, -0.342117) yaw:-72.708839
-Currently At: (0.471566, -0.246636, 0.194791) yaw: -72.708839
-Current State (u,f,l,r,b),(x,y,z), yaw) (2158, 1816, 166, 1299, 1775), (0.531321, -0.334246, 0.204009), -78.755752 
-Got range coords
---43, -174, 0, 0
-Tree has 21 nodes
-action: 0
-Navigation: Forward
-Moving from (0.528161,-0.324303) forward 100 to point (0.550660, -0.421739) yaw:-76.997924
-Currently At: (0.528161, -0.324303, 0.204009) yaw: -76.997924
-Current State (u,f,l,r,b),(x,y,z), yaw) (2130, 1760, 206, 1527, 1922), (0.483898, -0.350808, 0.203379), -76.085273 
-Got range coords
---39, -173, 0, 0
-Tree has 21 nodes
-action: 0
-Navigation: Forward
-Moving from (0.499911,-0.379487) forward 100 to point (0.521823, -0.477056) yaw:-77.342575
-Currently At: (0.499911, -0.379487, 0.203379) yaw: -77.342575
-Current State (u,f,l,r,b),(x,y,z), yaw) (2111, 1716, 143, 1312, 1275), (0.569801, -0.397216, 0.200593), -83.297363 
-Got range coords
---21, -171, 0, 0
-Tree has 22 nodes
-action: 0
-Navigation: Forward
-Moving from (0.561488,-0.390788) forward 100 to point (0.572442, -0.490187) yaw:-83.711074
-Currently At: (0.561488, -0.390788, 0.200593) yaw: -83.711074
-Current State (u,f,l,r,b),(x,y,z), yaw) (2185, 1704, 225, 1074, 1911), (0.481899, -0.496544, 0.200071), -81.138916 
-Got range coords
---11, -170, 0, 0
-Tree has 22 nodes
-action: 0
-Navigation: Forward
-Moving from (0.501340,-0.510343) forward 100 to point (0.506638, -0.610202) yaw:-86.962959
-Currently At: (0.501340, -0.510343, 0.200071) yaw: -86.962959
-Current State (u,f,l,r,b),(x,y,z), yaw) (2143, 1342, 181, 1074, 1328), (0.553995, -0.486479, 0.200126), -92.693176 
-Got range coords
---0, -138, 0, 0
-Tree has 23 nodes
-action: 0
-Navigation: Forward
-Moving from (0.539135,-0.514122) forward 100 to point (0.537803, -0.614113) yaw:-90.763351
-Currently At: (0.539135, -0.514122, 0.200126) yaw: -90.763351
-Current State (u,f,l,r,b),(x,y,z), yaw) (2151, 1654, 327, 1150, 1585), (0.474936, -0.631448, 0.203851), -90.618881 
-Got range coords
----5, -164, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.468375,-0.642563) forward 100 to point (0.464602, -0.742492) yaw:-92.162185
-Currently At: (0.468375, -0.642563, 0.203851) yaw: -92.162185
-Current State (u,f,l,r,b),(x,y,z), yaw) (2145, 1408, 219, 1080, 1385), (0.517885, -0.611193, 0.202813), -90.431396 
-Got range coords
----2, -120, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.507680,-0.638848) forward 100 to point (0.505696, -0.738829) yaw:-91.136489
-Currently At: (0.507680, -0.638848, 0.202813) yaw: -91.136489
-Current State (u,f,l,r,b),(x,y,z), yaw) (2115, 1539, 1960, 612, 1604), (0.474348, -0.788387, 0.212745), -90.289024 
-Got range coords
---2, -151, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.493745,-0.795359) forward 100 to point (0.495149, -0.895349) yaw:-89.195655
-Currently At: (0.493745, -0.795359, 0.212745) yaw: -89.195655
-Current State (u,f,l,r,b),(x,y,z), yaw) (2139, 1429, 1899, 580, 1881), (0.506638, -0.752542, 0.201682), -86.843803 
-Got range coords
---9, -139, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.501666,-0.789784) forward 100 to point (0.507350, -0.889622) yaw:-86.741294
-Currently At: (0.501666, -0.789784, 0.201682) yaw: -86.741294
-Current State (u,f,l,r,b),(x,y,z), yaw) (2130, 1389, 1967, 578, 1821), (0.514554, -0.927417, 0.199215), -87.885765 
-Got range coords
---9, -137, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.522979,-0.928555) forward 100 to point (0.528239, -1.028416) yaw:-86.984581
-Currently At: (0.522979, -0.928555, 0.199215) yaw: -86.984581
-Current State (u,f,l,r,b),(x,y,z), yaw) (2157, 1343, 1944, 570, 2093), (0.516911, -0.890832, 0.188749), -86.786254 
-Got range coords
---6, -130, 0, 0
-Tree has 32 nodes
-action: 0
-Navigation: Forward
-Moving from (0.519286,-0.922700) forward 100 to point (0.523618, -1.022606) yaw:-87.516914
-Currently At: (0.519286, -0.922700, 0.188749) yaw: -87.516914
-Current State (u,f,l,r,b),(x,y,z), yaw) (2110, 1271, 1979, 1353, 1753), (0.528688, -1.058266, 0.202969), -87.847892 
-Got range coords
---6, -126, 0, -1
-Tree has 33 nodes
-action: 0
-Navigation: Forward
-Moving from (0.531490,-1.056032) forward 100 to point (0.535668, -1.155945) yaw:-87.605628
-Currently At: (0.531490, -1.056032, 0.202969) yaw: -87.605628
-Current State (u,f,l,r,b),(x,y,z), yaw) (2141, 1261, 1984, 860, 2207), (0.517849, -1.024338, 0.183353), -86.862205 
-Got range coords
---8, -125, 0, -1
-Tree has 33 nodes
-action: 0
-Navigation: Forward
-Moving from (0.520902,-1.057305) forward 100 to point (0.527485, -1.157088) yaw:-86.225418
-Currently At: (0.520902, -1.057305, 0.183353) yaw: -86.225418
-Current State (u,f,l,r,b),(x,y,z), yaw) (41, 1155, 2026, 1463, 2000), (0.538426, -1.177736, 0.196311), -87.600730 
-Got range coords
---4, -115, 0, -1
-Tree has 33 nodes
-stateSet: moveDown
-action: 4
-Navigation: hovering In Place
-up is 2404
-left is1
-Stopped
+Turning Left to setpoint (5.519690, 1.749447) yaw: 22.938064 
+Currently At: (0.901754, -0.071280, -0.100605) yaw: -70.520133
+Current State (u,f,l,r,b),(x,y,z), yaw) (1065, 10, 252, 2718, 1914), (0.235078, 0.290943, 1.332238), 23.357625 
+ITER = 0
+FRONT-----:

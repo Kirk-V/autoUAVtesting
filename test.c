@@ -89,6 +89,7 @@ int writeImage(char* filename, int width, int height,  char* title, quadTree *t)
       for(x=-1*(width/2); x<width/2; x++) {
     	  treeNode *n = getNode(x, y*(-1), t->treeRoot, 512);
     	  occ = n->occupancy;
+        // printf("%i", occ);
     	  if(occ<0)
     	  {
     		  row[x+width/2] = 0;
@@ -230,7 +231,7 @@ int main()
 	{
 
 		treeNode root = {0,0,0,0,0};
-		quadTree t = {&root,0,0};
+		quadTree tt = {&root,0,0};
 
 		int points[100][2];
 		for(int i = 0; i<2; i++)
@@ -239,13 +240,13 @@ int main()
 			points[i][1] = RandomInt(-512, 512);
 			printf("inserting point at %i,%i\n", points[i][0],points[i][1]);
 
-			updateTree(&t, 0,0, points[i][0], points[i][1]);
+			updateTree(&tt, 0,0, points[i][0], points[i][1]);
 
 		}
 		printf("printing tree\n" );
-		int w = writeImage("testing", 1024, 1024, "map", &t);
+		int w = writeImage("testing", 1024, 1024, "map", &tt);
 		printf("w: %i\n", w);
-		printf("size of tree : %i \n", t.count);
+		printf("size of tree : %i \n", tt.count);
 
 	}
 	if(test_collected_data)

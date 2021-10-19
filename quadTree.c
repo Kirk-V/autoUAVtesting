@@ -20,7 +20,7 @@
 
 
 int maxSize = 512; //size of a side for the largest possible square of the map;
-int resolution = 8; //size of a side of the smallest possible square of the map
+int resolution = 16; //size of a side of the smallest possible square of the map
 
 int round10(int n)
 {
@@ -79,7 +79,7 @@ void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point
 		for (int i = pos; i < point; i++)
 		{
 			y = y + m;
-			// printf("Inserting NEW NODE: (%i, %f)\n",i, y);
+			printf("Inserting NEW NODE: (%i, %f)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 
 		}
@@ -88,7 +88,7 @@ void updateTree(quadTree* tree, float pos_x, float pos_y, int point_x, int point
 		for (int i = pos; i > point; i--)
 		{
 			y = y - m;//c
-			// printf("Inserting NEW NODE: (%i,%fd)\n",i, y);
+			printf("Inserting NEW NODE: (%i,%fd)\n",i, y);
 			insertNode(tree, tree->treeRoot, i, y, false, maxSize);
 		}
 	}
@@ -113,7 +113,7 @@ void getNorthNeighbour(quadTree *tree, coord centerNode, treeNode *north)
 // check if nodes can be combined while propagating back
 void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, int squareSize) //recursive attempt so that pruning can be achieved
 {
-//	DEBUG_PRINT("square size: %i\n", squareSize);
+	printf("square size: %i\n", squareSize);
 
 	if (!inRange(x, y)){
 		// DEBUG_PRINT("out of range\n");
@@ -145,6 +145,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	// If we have reached the smallest resolution, we must insert/update the node
 	if(squareSize < resolution)
 	{
+        printf("inserting\n");
 		//space cannot be divided up further, we should update the node here
 		if (occupied) //data says occupied
 		{
@@ -293,7 +294,7 @@ void insertNode(quadTree* tree, treeNode* node,  int x, int y, bool occupied, in
 	//check if we can now prune
 	if((node->nw) && (node->sw) && (node->ne) && (node->se))
 	{
-//		DEBUG_PRINT("Pruning\n");
+		printf("Pruning\n");
 //		vTaskDelay(M2T(1000));
 		bool pruned = prune(node);
 		if(pruned)
@@ -322,7 +323,7 @@ treeNode* getNode(int x, int y, treeNode* node, int squareSize)
 
 
 	// If we have reached the smallest resolution, we have found the node
-	if(squareSize <= resolution)
+	if(squareSize < resolution)
 	{
 		//space cannot be divided up further
 		return node;
